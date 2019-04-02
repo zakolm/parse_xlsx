@@ -36,7 +36,7 @@ def sent_email(NAME, TO, SUBJECT):
     server = smtplib.SMTP_SSL(HOST)
     server.login(FROM, PASSWORD)
 
-    server.sendmail(FROM, 'zakolesnik.m@gmail.com', msg.as_string())
+    server.sendmail(FROM, TO, msg.as_string())
     server.quit()
 
 
