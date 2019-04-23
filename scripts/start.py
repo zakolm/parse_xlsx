@@ -16,7 +16,7 @@ def creation_date(path_to_file):
             return stat.st_mtime
 
 
-path = "../"
+path = "./"
 try:
     os.mkdir(path+'logs')
 except:
@@ -35,4 +35,4 @@ for file in os.listdir(path):
 for file in files:
     if new_file_date > creation_date(path+file):
         os.rename(path + file, path + './old/' + file)
-os.system("python ../scripts/parse.py")
+os.system("python ./scripts/parse.py")
